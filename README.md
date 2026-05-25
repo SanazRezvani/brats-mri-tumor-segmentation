@@ -1,0 +1,57 @@
+# Brain Tumor MRI Segmentation with MATLAB (BraTS)
+
+A MATLAB-based medical image segmentation pipeline using the BraTS (Brain Tumor Segmentation) dataset.
+
+This project demonstrates a complete medical imaging workflow for brain MRI analysis, including:
+
+- Loading multi-modal NIfTI MRI volumes
+- MRI preprocessing and normalisation
+- Tumor mask exploration and visualisation
+- 2D slice dataset construction
+- U-Net-based semantic segmentation
+- Quantitative evaluation using Dice and IoU metrics
+
+The repository is designed as a research-engineering prototype for medical image analysis and biomedical AI workflows.
+
+---
+
+# Project Overview
+
+Brain tumor segmentation is an important task in medical image analysis, enabling quantitative assessment of tumor regions from MRI scans.
+
+This project uses the BraTS dataset and focuses on:
+
+- FLAIR MRI preprocessing
+- Whole tumor segmentation
+- 2D U-Net training in MATLAB
+- Patient-wise train/validation/test splitting
+- Quantitative performance evaluation
+
+The workflow is intentionally modular and reproducible, making it suitable for experimentation, extension, and educational purposes.
+
+---
+
+# Dataset
+
+This project uses the publicly available BraTS dataset.
+
+Modalities used:
+
+- T1
+- T1ce
+- T2
+- FLAIR
+- Segmentation masks
+
+Data format:
+
+- `.nii` / `.nii.gz` NIfTI volumes
+
+Example patient files:
+
+```text
+BraTS20_Training_001_flair.nii
+BraTS20_Training_001_t1.nii
+BraTS20_Training_001_t1ce.nii
+BraTS20_Training_001_t2.nii
+BraTS20_Training_001_seg.nii
